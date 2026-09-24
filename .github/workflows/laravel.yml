@@ -1,4 +1,4 @@
-name: Laravel CI
+name: Laravel CI/CD Pipeline
 
 on:
   push:
@@ -12,7 +12,9 @@ on:
       - dev
 
 jobs:
-  laravel-tests:
+  # 1. TAHAP BUILD
+  build:
+    name: Build & Dependencies
     runs-on: ubuntu-latest
 
     steps:
@@ -34,5 +36,74 @@ jobs:
           cp .env.example .env
           php artisan key:generate
 
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: laravel-build
+          path: |
+            vendor
+            .env
+
+  # 2. TAHAP TEST (Menunggu job build selesai)
+  test:
+    name: Automated Testing
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.5"
+          extensions: mbstring, dom, fileinfo, sqlite, pdo_sqlite
+          coverage: none
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: laravel-build
+
       - name: Run Laravel tests
         run: php artisan test
+
+  # 3. TAHAP STAGING (Menunggu job test selesai)
+  staging:
+    name: Deploy to Staging
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Staging Deployment Simulation
+        run: |
+          echo "🚀 [STAGING] Memulai simulasi deployment ke server staging..."
+          echo "📦 Menyiapkan build aplikasi untuk staging..."
+          echo "✅ [STAGING] Simulasi deploy ke staging environment berhasil!"
+
+  # 4. TAHAP PRODUCTION (Hanya berjalan di branch main + butuh Approval Reviewer)
+  production:
+    name: Deploy to Production
+    needs: staging
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Production Deployment Simulation (7 Langkah deploy.sh)
+        run: |
+          echo "🚀 [PRODUCTION] Memulai proses deployment ke Production Server..."
+          echo "---------------------------------------------------------"
+          echo "Langkah 1: php artisan down"
+          echo "Langkah 2: git pull origin main"
+          echo "Langkah 3: composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev"
+          echo "Langkah 4: php artisan migrate --force"
+          echo "Langkah 5: php artisan config:cache"
+          echo "Langkah 6: php artisan route:cache"
+          echo "Langkah 7: php artisan up"
+          echo "---------------------------------------------------------"
+          echo "✅ [PRODUCTION] Deployment ke server production selesai dan sukses!"
