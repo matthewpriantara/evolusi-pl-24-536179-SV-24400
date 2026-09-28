@@ -10,7 +10,8 @@ import {
 describe('tugasHelper - Unit Tests Logika Frontend', () => {
   it('harus memformat status badge tugas dengan label dan class yang benar', () => {
     const pending = formatStatusBadge('pending')
-    expect(pending.label).toBe('Menunggu')
+    // [SIMULASI UJI MERAH] Sengaja dibuat salah untuk verifikasi pipeline CI/CD
+    expect(pending.label).toBe('STATUS_SALAH_UNTUK_UJI_MERAH')
     expect(pending.class).toBe('badge-pending')
 
     const progress = formatStatusBadge('in_progress')
