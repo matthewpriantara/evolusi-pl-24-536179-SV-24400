@@ -5,16 +5,16 @@
 # **Evolusi App**
 
 <p align="center">
-  <strong>Aplikasi Web Modern untuk Tugas Akhir Pemrograman Web</strong>
+  <strong>Aplikasi Web Modern & CI/CD Pipeline — Praktikum Konstruksi dan Evolusi Perangkat Lunak</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
   <img src="https://img.shields.io/badge/PHP-8.2%2B-777BB4?logo=php&logoColor=white" alt="PHP Version">
-  <img src="https://img.shields.io/badge/Laravel-11.x-FF2D20?logo=laravel&logoColor=white" alt="Laravel Version">
-  <img src="https://img.shields.io/badge/TailwindCSS-3.x-06B6D4?logo=tailwindcss&logoColor=white" alt="TailwindCSS">
+  <img src="https://img.shields.io/badge/Laravel-11.x%20%2F%2013-FF2D20?logo=laravel&logoColor=white" alt="Laravel Version">
+  <img src="https://img.shields.io/badge/Vue.js-3.x-4FC08D?logo=vuedotjs&logoColor=white" alt="Vue 3">
+  <img src="https://img.shields.io/badge/Vite-6.x-646CFF?logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/Vitest-2.x-729B1B?logo=vitest&logoColor=white" alt="Vitest">
+  <img src="https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?logo=github-actions&logoColor=white" alt="CI/CD">
 </p>
 
 <p align="center">
@@ -24,7 +24,7 @@
   <a href="#-instalasi">Instalasi</a> •
   <a href="#-struktur-proyek">Struktur</a> •
   <a href="#-workflow-git">Workflow</a> •
-  <a href="#-license">License</a>
+  <a href="#-author">Author</a>
 </p>
 
 </div>
@@ -33,16 +33,17 @@
 
 ## 📖 Tentang Proyek
 
-**Evolusi App** adalah aplikasi web yang dibangun menggunakan **Laravel 11** sebagai pemenuhan tugas akhir mata kuliah **Pemrograman Web (PKW)**. Aplikasi ini dirancang dengan arsitektur modern, desain *responsive*, dan mengikuti *best practices* pengembangan web kontemporer.
+**Evolusi App** adalah aplikasi web modern yang mengintegrasikan backend **Laravel** dan frontend **Vue 3 SPA (Single Page Application)** sebagai pemenuhan praktikum mata kuliah **Konstruksi dan Evolusi Perangkat Lunak**. Proyek ini dilengkapi dengan arsitektur RESTful API, pengujian otomatis terisolasi (PHPUnit & Vitest), serta pipeline CI/CD bertingkat menggunakan GitHub Actions dengan mekanisme *artifact passing* dan *branch protection*.
 
 <div align="center">
 
 | Detail | Informasi |
 |--------|-----------|
-| **Mata Kuliah** | Pemrograman Web |
-| **Tugas** | Repository Pertama (UAS) |
-| **Framework** | Laravel 11 |
-| **Status** | 🟢 Aktif Development |
+| **Mata Kuliah** | Konstruksi dan Evolusi Perangkat Lunak |
+| **Program Studi** | Software Engineering |
+| **Repository** | `evolusi-pl-24-536179-SV-24400` |
+| **Framework & Tools** | Laravel, Vue 3, Vite, Vitest, GitHub Actions |
+| **Status** | 🟢 CI/CD Automated & Active Development |
 
 </div>
 
@@ -68,134 +69,105 @@
 <div align="center">
 
 ### Backend
-<img src="https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel"/>
+<img src="https://img.shields.io/badge/Laravel-11.x%20%2F%2013-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel"/>
 <img src="https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP"/>
 <img src="https://img.shields.io/badge/Composer-Dependency_Manager-885630?style=for-the-badge&logo=composer&logoColor=white" alt="Composer"/>
+<img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
 
-### Frontend
+### Frontend (SPA)
+<img src="https://img.shields.io/badge/Vue.js-3.x-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Vue 3"/>
+<img src="https://img.shields.io/badge/Vite-6.x-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+<img src="https://img.shields.io/badge/Vue_Router-4.x-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Vue Router"/>
 <img src="https://img.shields.io/badge/TailwindCSS-3.x-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS"/>
-<img src="https://img.shields.io/badge/Vite-Build_Tool-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
-<img src="https://img.shields.io/badge/Alpine.js-3.x-8BC0D0?style=for-the-badge&logo=alpine.js&logoColor=white" alt="Alpine.js"/>
 
-### Database & Tools
-<img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
-<img src="https://img.shields.io/badge/Git-VCS-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+### Testing & CI/CD
+<img src="https://img.shields.io/badge/Vitest-2.x-729B1B?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest"/>
+<img src="https://img.shields.io/badge/PHPUnit-11.x-3C9CD7?style=for-the-badge&logo=php&logoColor=white" alt="PHPUnit"/>
+<img src="https://img.shields.io/badge/ESLint-8.x-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint"/>
 <img src="https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions"/>
 
 </div>
 
 ---
 
-## 📸 Preview
-
-<div align="center">
-
-### Homepage
-> *Desain custom dengan hero section, feature cards, dan navigasi modern*
-
-![Homepage Preview](https://via.placeholder.com/800x450/FF6B35/FFFFFF?text=Evolusi+App+Homepage)
-
-### Fitur Section
-> *Kartu fitur dengan animasi scroll dan hover effects*
-
-![Features Preview](https://via.placeholder.com/800x450/1A1A1A/FF6B35?text=Features+Section)
-
-</div>
-
-> **Note**: Screenshot di atas adalah placeholder. Ganti dengan screenshot aktual aplikasi Anda.
-
----
-
-## 🚀 Instalasi
+## 🚀 Instalasi & Menjalankan Proyek
 
 ### Prasyarat
-- PHP ≥ 8.2
-- Composer
-- Node.js ≥ 18 & NPM
-- MySQL / MariaDB
+- PHP ≥ 8.2 & Composer
+- Node.js ≥ 20 & NPM
+- SQLite / MySQL
 
-### Langkah Instalasi
+### 1. Setup Backend (Laravel)
 
 ```bash
-# 1. Clone repository
-git clone https://github.com/USERNAME/evolusi-pl-NIM.git
-cd evolusi-pl-NIM
+# Clone repository
+git clone https://github.com/KEPL2026/evolusi-pl-24-536179-SV-24400.git
+cd evolusi-pl-24-536179-SV-24400
 
-# 2. Install dependencies PHP
+# Install dependencies PHP
 composer install
 
-# 3. Install dependencies Node.js
-npm install
-
-# 4. Copy environment file
+# Environment setup
 cp .env.example .env
-
-# 5. Generate application key
 php artisan key:generate
 
-# 6. Konfigurasi database di .env
-# DB_DATABASE=evolusi_app
-# DB_USERNAME=root
-# DB_PASSWORD=
-
-# 6. Jalankan migrasi & seeder
+# Migrasi & Seeder
 php artisan migrate --seed
 
-# 7. Build assets
-npm run build
-# atau untuk development: npm run dev
-
-# 8. Jalankan server
+# Jalankan backend server
 php artisan serve
+# Backend aktif di http://localhost:8000
 ```
 
-Aplikasi akan berjalan di `http://localhost:8000`
+### 2. Setup Frontend (Vue 3 SPA)
+
+```bash
+# Masuk ke direktori frontend
+cd frontend
+
+# Install dependencies Node.js
+npm install
+
+# Setup environment frontend
+cp .env.example .env
+# Default VITE_API_URL=http://localhost:8000/api
+
+# Jalankan unit test (Vitest)
+npm run test
+
+# Jalankan development server
+npm run dev
+# Frontend aktif di http://localhost:5173
+```
 
 ---
 
 ## 📁 Struktur Proyek
 
 ```
-evolusi-pl-NIM/
+evolusi-pl-24-536179-SV-24400/
 ├── .github/
 │   └── workflows/
-│       └── ci.yml              # GitHub Actions CI/CD
+│       ├── ci.yml                 # Laravel CI/CD Workflow
+│       └── frontend.yml           # Frontend 4-Stage CI/CD (Lint -> Test -> Build -> Deploy)
 ├── app/
-│   ├── Http/
-│   │   ├── Controllers/        # Controller aplikasi
-│   │   └── Middleware/         # Custom middleware
-│   ├── Models/                 # Eloquent Models
-│   └── Providers/              # Service Providers
-├── bootstrap/
-├── config/                     # File konfigurasi
-├── database/
-│   ├── factories/              # Model factories
-│   ├── migrations/             # Database migrations
-│   └── seeders/                # Database seeders
-├── public/                     # Public assets
-├── resources/
-│   ├── css/                    # Stylesheets
-│   ├── js/                     # JavaScript
-│   └── views/                  # Blade templates
-│       ├── components/         # Reusable components
-│       ├── layouts/            # Layout templates
-│       └── welcome.blade.php   # Custom homepage
+│   ├── Http/Controllers/Api/     # RESTful API Controller (TugasController)
+│   └── Models/                    # Eloquent Models (Tugas, User)
+├── config/cors.php                # Konfigurasi CORS untuk integrasi Frontend Vue
+├── database/migrations/           # Skema database & tabel tugas
 ├── routes/
-│   ├── web.php                 # Web routes
-│   └── api.php                 # API routes
-├── storage/
-├── tests/
-│   ├── Feature/                # Feature tests
-│   └── Unit/                   # Unit tests
-├── vendor/
-├── .env.example
-├── .gitignore
-├── artisan
-├── composer.json
-├── package.json
-├── phpunit.xml
-├── tailwind.config.js
-├── vite.config.js
+│   ├── api.php                    # RESTful JSON API Routes
+│   └── web.php                    # Web routes
+├── frontend/                      # Vue 3 SPA Application
+│   ├── src/
+│   │   ├── views/                 # HomeView.vue, TugasView.vue
+│   │   ├── router/                # Vue Router Configuration
+│   │   └── utils/                 # Pure helper logic & Vitest unit tests
+│   ├── vite.config.js             # Konfigurasi Vite & Vitest
+│   ├── package.json               # Dependensi Vue 3, Vite, Vitest, ESLint
+│   └── .env.example               # Referensi VITE_API_URL
+├── tests/                         # PHPUnit Feature & Unit Tests
+├── composer.json                  # Dependensi Laravel
 └── README.md
 ```
 
@@ -281,25 +253,26 @@ jobs:
         run: php artisan test --no-coverage
 ```
 
-**Status**: ![CI](https://github.com/USERNAME/evolusi-pl-NIM/workflows/Laravel%20CI/badge.svg)
+**Status**: ![CI](https://github.com/matthewpriantara/evolusi-pl-24-536179-SV-24400/workflows/Laravel%20CI/badge.svg)
 
 ---
 
-## 📋 Checklist Tugas
+## 📋 Checklist Tugas & Praktikum
 
-- [x] Repository bernama `evolusi-pl-NIM` (public)
-- [x] Aplikasi Laravel 11
+- [x] Repository bernama `evolusi-pl-24-536179-SV-24400`
+- [x] Aplikasi Laravel 11 / 13 (Backend API & CORS)
+- [x] Aplikasi Frontend Vue 3 SPA (Vite + Vue Router)
+- [x] Pengujian Logika Unit Terisolasi (Vitest & PHPUnit)
 - [x] Minimal 5 commit (Conventional Commits)
-- [x] Branch: `main`, `dev`, `feature/homepage`
-- [x] Perubahan nyata pada `feature/homepage`
-- [x] PR #1: `feature/homepage` → `dev`
-- [x] PR #2: `dev` → `main`
-- [x] GitHub Actions workflow (`.github/workflows/ci.yml`)
+- [x] Branching strategy: `main`, `dev`, `feature/homepage`, `feature/p4-frontend-vue`
+- [x] GitHub Actions workflow:
+  - `.github/workflows/ci.yml` (Laravel Testing)
+  - `.github/workflows/frontend.yml` (4-Stage: Lint -> Test -> Build -> Deploy with Artifact Passing)
 - [x] Workflow berjalan **GREEN/SUCCESS**
 - [x] Branch protection pada `main` & `dev`
 - [x] Collaborator dosen/asisten (role: Read)
 - [x] Tidak ada file sensitif (`.env`, key, secret)
-- [x] README estetik & informatif
+- [x] README informatif & terstruktur
 - [x] `.gitignore` lengkap
 
 ---
@@ -308,7 +281,7 @@ jobs:
 
 Proyek ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE) untuk detail.
 
-> **Note**: Ini adalah proyek tugas akhir akademik. Kode bersifat edukatif.
+> **Note**: Ini adalah proyek tugas akademik praktikum. Kode bersifat edukatif.
 
 ---
 
@@ -318,14 +291,14 @@ Proyek ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE)
 
 | | |
 |---|---|
-| **Nama** | [Nama Anda] |
-| **NIM** | [NIM Anda] |
-| **Program Studi** | Teknik Informatika |
-| **Mata Kuliah** | Pemrograman Web |
+| **Nama** | Matthew Hayunaji Priantara |
+| **NIM** | 24/536179/SV/24400 |
+| **Program Studi** | Software Engineering |
+| **Mata Kuliah** | Konstruksi dan Evolusi Perangkat Lunak |
 | **Semester** | 5 |
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/USERNAME)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/USERNAME)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/matthewpriantara)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/matthewpriantara)
 
 </div>
 
@@ -335,6 +308,6 @@ Proyek ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE)
 
 **⭐ Jika proyek ini bermanfaat, beri star ya!**
 
-Made with ❤️ using Laravel & TailwindCSS
+Made with ❤️ using Laravel & Vue 3
 
 </div>
